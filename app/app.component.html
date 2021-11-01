@@ -1,0 +1,28 @@
+<ion-app>
+  
+  <ion-menu menuId="first" side="start" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-avatar slot="start">
+          <img src="assets/avatar.png" style="padding:10px;">
+        </ion-avatar>
+        <p style="text-align: center; font-weight: bold;">Ingresa a tu cuenta o Regístrate</p>
+        <p style="font-size: 12px; text-align: center;">Podrías ver detalles de envío y personalizar tu experiencia</p>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item *ngFor="let c of componentes"
+                  [routerLink]="c.redirecTo"
+                  detail=true>
+                  <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+                  {{c.name}}
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>  
+
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

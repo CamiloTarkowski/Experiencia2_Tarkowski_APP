@@ -1,0 +1,50 @@
+<ion-content> <!--Toolbar de hora, señal, etc.-->
+  <ion-toolbar color="#9522FF" class="tb_height tb1_color">
+  </ion-toolbar>
+
+  <ion-toolbar color="primary"> <!--toolbar menu, search y carrito-->
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon color="light" slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon name="cart-outline" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-searchbar mode="md" placeholder="Buscar "></ion-searchbar>
+  </ion-toolbar>
+
+  <ion-toolbar color="primary"><!--toolbar ubicación y usuario-->
+    <ion-buttons slot="start">
+      <ion-button>
+      <ion-icon  name="location-outline" color="light"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+
+    <ion-buttons>
+      <ion-text color="light">
+        <p class="ta_center">Enviar a Nuevo Usuario - Fra</p>
+      </ion-text>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button>
+      <ion-icon  name="chevron-forward-outline" color="light"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let i of productos">
+                <img slot="start"src={{i.imagen}}  style="padding-top:10px; width: 80px; height:80px; position:relative;">
+                <ion-text slot="start"><p style="font-size: 12px; width:80px;">{{i.name}}</p>
+                  <p style="font-size: 13px;color:#ac2c2c;">{{i.precio}}<p></p></ion-text>
+                  <ion-icon  slot="end" name="heart-outline"></ion-icon>
+                
+                
+      </ion-item>
+    </ion-list>
+  </ion-content>
