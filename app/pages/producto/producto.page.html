@@ -1,0 +1,66 @@
+<ion-content>
+<ion-header>
+  <ion-toolbar color="primary"> 
+    <ion-title slot="start">Agrega un producto</ion-title>
+    <ion-icon slot="start" name="bag-check-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+
+
+  <ion-item>
+        <ion-label position="stacked">Código</ion-label>
+        <ion-input type="number" [(ngModel)]="newProducto.codigo" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="newProducto.nombre" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+         <ion-label position="stacked">Precio</ion-label>
+         <ion-input type="number" [(ngModel)]="newProducto.precio" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+       <ion-label position="stacked">Stock</ion-label>
+       <ion-input type="number" [(ngModel)]="newProducto.stock" required></ion-input>
+  </ion-item>
+<ion-button (click)="addProducto()" mode="ios" expand="full" color="primary">
+  Agregar producto
+</ion-button>
+
+<ion-list #myList>
+  <ion-list-header>
+    <ion-label>Productos existentes</ion-label>
+    
+  </ion-list-header>
+  <ion-list>
+    <ion-item-sliding *ngFor="let producto of productos">
+      <ion-item>
+                    
+        <ion-text color="primary"> 
+                    <p style="padding:10px">{{producto.nombre}}</p>
+                    </ion-text>
+                    <ion-text color="dark"> 
+                      <p style="padding:10px">${{producto.precio}}</p>
+                    </ion-text>
+                    <ion-text color="dark">
+                      <p style="padding:10px">{{producto.stock}}</p> 
+                         
+                      </ion-text>
+                      <ion-text color="dark">
+                        <p style="padding:10px">{{producto.codigo}}</p> 
+                           
+                        </ion-text>                    
+
+                </ion-item>
+    </ion-item-sliding>
+
+
+  </ion-list>
+</ion-list>
+
+
+</ion-content>

@@ -39,8 +39,8 @@ export class AppComponent {
     },
     {
       icon:'bag-check-outline',
-      name: 'Mis compras',
-      redirecTo:'/inicio'
+      name: 'Productos',
+      redirecTo:'/producto'
     },
     {
       icon:'log-out-outline',
