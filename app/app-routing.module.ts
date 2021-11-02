@@ -12,10 +12,7 @@ const routes: Routes = [
     path: 'inicio',
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
   },
-  {
-    path: 'alert',
-    loadChildren: () => import('./pages/alert/alert.module').then( m => m.AlertPageModule)
-  },
+  
   {
     path: 'ofertas',
     loadChildren: () => import('./pages/ofertas/ofertas.module').then( m => m.OfertasPageModule)
@@ -27,10 +24,6 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },
-  {
-    path: 'datos',
-    loadChildren: () => import('./pages/datos/datos.module').then( m => m.DatosPageModule)
   },
   {
     path: 'producto',

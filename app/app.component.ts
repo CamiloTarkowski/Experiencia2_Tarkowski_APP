@@ -34,14 +34,15 @@ export class AppComponent {
     },
     {
       icon:'heart-outline',
-      name: 'Favoritos',
-      redirecTo:'/inicio'
-    },
-    {
-      icon:'bag-check-outline',
       name: 'Productos',
       redirecTo:'/producto'
     },
+    {
+      icon:'newspaper-outline',
+      name: 'Apirest',
+      redirecTo:'/apirest'
+    },
+    
     {
       icon:'log-out-outline',
       name: 'Cerrar sesión',
